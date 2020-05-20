@@ -1,0 +1,43 @@
+$header-height: 150px;
+
+.nav, .grid, .content {
+  width: 95%;
+  max-width: 720px;
+
+  margin: 0 auto;
+}
+
+.front {
+  width: 100%;
+
+  padding: 0.15rem 0;
+
+  .grid {
+    display: grid;
+
+    grid-template-columns: auto $header-height;
+    grid-template-rows: $header-height auto;
+
+    .title {
+      display: grid;
+
+      justify-items: start;
+      align-items: center;
+    }
+
+    .portrait {
+      display: grid;
+
+      justify-items: center;
+      align-items: center;
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+.content {
+  padding-top: 1.75rem;
+}

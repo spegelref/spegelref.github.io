@@ -1,0 +1,41 @@
+
+$link-colors: rgb(255, 255, 255);
+
+.nav {
+  padding: 1em 0;
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      list-style: none;
+
+      margin: 0;
+      margin-right: 2em;
+
+      &::before {
+        content: "";
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+
+      &.active::before {
+        background: $link-colors;
+      }
+    }
+  }
+
+  #{'a, a:active, a:hover, a:visited'} {
+    color: $link-colors;
+    text-decoration: none;
+
+    font-size: 14pt;
+  }
+}
