@@ -12,7 +12,6 @@ body {
   color: $color1;
   font-family: 'Lato', sans-serif;
 }
-
 .front {
   background: $background-light;
   color: $color1;
@@ -22,7 +21,12 @@ body {
     font-size: 16pt;
     font-weight: 400;
     margin: 0;
-    font-family: 'Source Code Pro', monospace;
+    // font-family: 'Source Code Pro', monospace;
+    font-family: 'Comic Sans MS';
+  }
+
+  h1 {
+    font-size: 18pt;
   }
 }
 
@@ -40,7 +44,7 @@ body {
 
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url("/assets/images/portrait.png");
+    background-image: url("https://www.thispersondoesnotexist.com/image");
     background-position: center;
   }
 }
@@ -55,24 +59,21 @@ a {
   }
 }
 
-.boxes {
-  text-align: center;
-  .box {
-    display: inline-block;
+.header {
+  border-bottom: solid 2px $color3;
 
-    width: 100px;
-    height: 100px;
+  h1 {
+    font-size: 2in;
+    line-height: 2in;
 
-    &:nth-child(1) {
-      background: $color1;
-    }
+    color: $color3;
+  }
+}
 
-    &:nth-child(2) {
-      background: $color2;
-    }
-
-    &:nth-child(3) {
-      background: $color3;
-    }
+.content {
+  p{
+    background-image: linear-gradient(to left, violet,  green, yellow, orange, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

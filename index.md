@@ -3,6 +3,40 @@ layout:   front
 title:    Martin Lind
 subtitle: Developer, nerd & creator of random things
 ---
+<script>
+const throttle = (func, limit) => {
+  let lastFunc
+  let lastRan
+  return function() {
+    const context = this
+    const args = arguments
+    if (!lastRan) {
+      func.apply(context, args)
+      lastRan = Date.now()
+    } else {
+      clearTimeout(lastFunc)
+      lastFunc = setTimeout(function() {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args)
+          lastRan = Date.now()
+        }
+      }, limit - (Date.now() - lastRan))
+    }
+  }
+}
+const eventHandler = throttle((event) => {
+  const p = event.pageX / window.innerWidth;
+  let fs = event.pageY / window.innerHeight;
+  if (fs == 0) fs = 1;
+  const v = Math.round(p * 100);
+  const image = document.querySelector(".image");
+  image.style.transform = `rotate(${p * 360}deg)`;
+  document.body.style.fontSize = `${1+fs}em`;
+  document.body.style.filter = `contrast(${fs * 10})`;
+  document.body.style.transform = `rotate3d(${p}, ${fs}, ${p/fs}, ${Math.sqrt(fs * p) * 25}deg)`;
+}, 40);
+window.addEventListener('mousemove', eventHandler);
+</script>
 
 This is my index page. One of the random things I do for example is this site. For now it is quite empty, I am "working" on it. Some day it may—or may not—flourish with content. For now enjoy my beautiful banner. Which is using CSS grid layout and a GitHub template image instead of my face.
 

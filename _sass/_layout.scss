@@ -1,6 +1,6 @@
 $header-height: 150px;
 
-.nav, .grid, .content {
+.nav, .grid, .header, .content {
   width: 95%;
   max-width: 720px;
 
@@ -10,6 +10,8 @@ $header-height: 150px;
 .front {
   width: 100%;
 
+  margin: 0;
+  margin-bottom: 1.75rem;
   padding: 0.15rem 0;
 
   .grid {
@@ -36,8 +38,4 @@ $header-height: 150px;
       }
     }
   }
-}
-
-.content {
-  padding-top: 1.75rem;
 }
