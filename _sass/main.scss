@@ -21,8 +21,7 @@ body {
     font-size: 16pt;
     font-weight: 400;
     margin: 0;
-    // font-family: 'Source Code Pro', monospace;
-    font-family: 'Comic Sans MS';
+    font-family: 'Source Code Pro', monospace;
   }
 
   h1 {
@@ -44,7 +43,7 @@ body {
 
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url("https://www.thispersondoesnotexist.com/image");
+    background-image: url("/assets/images/portrait.png");
     background-position: center;
   }
 }
@@ -67,13 +66,5 @@ a {
     line-height: 2in;
 
     color: $color3;
-  }
-}
-
-.content {
-  p{
-    background-image: linear-gradient(to left, violet,  green, yellow, orange, red);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
