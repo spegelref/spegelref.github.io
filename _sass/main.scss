@@ -12,10 +12,10 @@ body {
   color: $color1;
   font-family: 'Lato', sans-serif;
 }
+
 .front {
   background: $background-light;
   color: $color1;
-
 
   h1, p {
     font-size: 16pt;
@@ -59,12 +59,12 @@ a {
 }
 
 .header {
-  border-bottom: solid 2px $color3;
+  border-bottom: solid 2px $color2;
 
   h1 {
-    font-size: 2in;
-    line-height: 2in;
+    font-size: 24pt;
+    line-height: 24pt;
 
-    color: $color3;
+    color: $color2;
   }
 }

@@ -4,17 +4,14 @@ layout: default
 
 {% include navigation.html %}
 
-<div class="header">
-  <h1>{{ page.title }}</h1>
+<div class="content">
+  {{content}}
 </div>
 
-<div class="content">
-  {{ content }}
-
-  <h2>Subaru Diesel EE20 Resources</h2>
+{% if page.category == 'ee20' %}
   <ul>
     {% for post in site.categories['ee20'] %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</div>
+{% endif %}
